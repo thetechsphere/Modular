@@ -4,29 +4,41 @@
 	* Author: Corbin "Spr0xy" Matschull
 	* License: MIT
  **/
- 
+		::selection{
+			background: #FF4081;
+			color: #fff;
+		}
+		html::-webkit-selection{
+			background: #FF4081;
+			color: #fff;
+		}
+		h1{
+		font-size: 45px;
+		font-weight: 400;
+		}
 		html,body{
 			font-family: "Helvetica Neue", "Roboto", Helvetica, Arial, sans-serif;
+			background: #fff;
         }
 		body{
-			overflow:hidden;
+			overflow-x:hidden;
 		}
         .popup-button{
           position: absolute;
           top:50vh;
-          left: 44vw;
+          left: 92vw;
           z-index: 1;
-		      width: 80px;
-          height: 80px;
-		      font-size:24px;
-		      text-align:center;
+		  width: 60px;
+          height: 60px;
+		  font-size:24px;
+		  text-align:center;
           border-radius: 2em;
           background:#64B5F6;
           -webkit-transition: all .25s ease-in-out;
              -moz-transition: all .25s ease-in-out;
-               -ms-transition: all .25s ease-in-out;
-                  -o-transition: all .25s ease-in-out;
-                      transition: all .25s ease-in-out;
+              -ms-transition: all .25s ease-in-out;
+               -o-transition: all .25s ease-in-out;
+                  transition: all .25s ease-in-out;
         }
 		.popup-button:hover{
 			box-shadow: 0px 10px 15px rgba(0,0,0,0.4);
@@ -36,19 +48,19 @@
 		.btn-cnt{
 			position:absolute;
 			top: 0.5vh;
-			left: 0.1vw;
-			font-size:60px;
-			width: 80px;
+			left: 0;
+			font-size:45px;
+			width: 60px;
 			-webkit-transition: all .45s ease-in-out;
 			   -moz-transition: all .45s ease-in-out;
           -ms-transition: all .45s ease-in-out;
            -o-transition: all .45s ease-in-out;
               transition: all .45s ease-in-out;
-      transform-origin: 50% 50%;
-      -webkit-transform-origin: 50% 50%;
-      -moz-transform-origin: 50% 50%;
-      -o-transform-origin: 50% 50%;
-      -ms-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
+			-webkit-transform-origin: 50% 50%;
+			-moz-transform-origin: 50% 50%;
+			-o-transform-origin: 50% 50%;
+			-ms-transform-origin: 50% 50%;
 		}
 		.popup-button .btn-cnt:hover{
 			color:#fff;
@@ -68,6 +80,7 @@
           left: 0;
           width: 100%;
           height: 100%;
+		  z-index: 999;
           background-color: black;
           opacity: .4;
           -webkit-transition: background .95s linear;
@@ -382,8 +395,8 @@
 			text-align:center;
 			display:flex;
 			width: 100vw;
-			left: -100vw;
-			top: -6.5vh;
+			left: -120vw;
+			top: -6vh;
 			opacity: 0;
 			transition-property: left;
 			-webkit-transition: all .50s ease-in;
@@ -399,7 +412,7 @@
 			display:flex !important;
 			width: 100vw !important;
 			left: 5vw !important;
-			top: -6.5vh !important;
+			top: -6vh !important;
 			opacity: 1 !important;
     }
 		.nav-el{
@@ -427,11 +440,16 @@
 			width: 60px;
 			height: 45px;
 			position: relative;
-			margin: 14px;
+			margin: 24px;
 			-webkit-transform: rotate(0deg);
 			-moz-transform: rotate(0deg);
 			-o-transform: rotate(0deg);
 			transform: rotate(0deg);
+			transform-origin: 50% 50%;
+			-webkit-transform-origin: 50% 50%;
+			-moz-transform-origin: 50% 50%;
+			-o-transform-origin: 50% 50%;
+			-ms-transform-origin: 50% 50%;
 			-webkit-transition: .5s ease-in-out;
 			-moz-transition: .5s ease-in-out;
 			-o-transition: .5s ease-in-out;
@@ -441,49 +459,60 @@
 .navburger span {
   display: block;
   position: absolute;
-  height: 8px;
-  width: 80%;
+  height: 4px;
+  width: 52%;
   background: #fff;
-  border-radius: 9px;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
+  -o-transform: rotate(0deg  );
   transform: rotate(0deg);
   -webkit-transition: all .25s ease-in-out;
      -moz-transition: all .25s ease-in-out;
        -o-transition: all .25s ease-in-out;
           transition: all .25s ease-in-out;
 }
+.navburger.open{
+	margin: 7px;
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
 .navburger span:nth-child(1) {
   top: 0px;
 }
 .navburger span:nth-child(2) {
-  top: 18px;
+  top: 9px;
 }
 .navburger span:nth-child(3) {
-  top: 36px;
+  top: 18px;
 }
 .navburger.open span:nth-child(1) {
-  top: 18px;
-  background: #89B5FF;
-  -webkit-transform: rotate(135deg);
-  -moz-transform: rotate(135deg);
-  -o-transform: rotate(135deg);
-  transform: rotate(135deg);
+  z-index: 99;
+  top: 2px;
+  left: 9px;
+  width: 25px;
+  border-radius:9px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .navburger.open span:nth-child(2) {
-  opacity: 0;
-  left: -60px;
+  border-radius: 9px;
 }
 .navburger.open span:nth-child(3) {
+  z-index: 99;
   top: 18px;
-  background: #89B5FF;
-  -webkit-transform: rotate(-135deg);
-  -moz-transform: rotate(-135deg);
-  -o-transform: rotate(-135deg);
-  transform: rotate(-135deg);
+  left:8px;
+  width: 25px;
+  border-radius:9px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }	
 		/******************* TOAST BARS ********************/
 		.toaster{
@@ -543,7 +572,8 @@
 		.toaster-bar-lg:not(.toaster-bar-rg), .toaster-bar-lg:not(.toaster-bar-sm){
 			width: 300px; height: 100px;
 			position: relative;
-			background: #009688;
+			background: #43A047;
+			z-index: 999;
 			top: 87vh; /** Move to this top val**/
 			border-radius: 0.5em;
 			-webkit-transition: all .25s linear;
@@ -552,7 +582,6 @@
                -o-transition: all .25s linear;
                   transition: all .25s linear;
 		}
-
 		.toaster-bar-lg .toast-text{
 			padding: 0.5em;
 			color: #fff;
@@ -597,7 +626,36 @@
 	.col-lg-12{
 		width: 100vw;
 		height: 100vh;
-		margin:0;
-		padding: 0;
-		clear:both;
+		left: -1vw;
+		top: 41vh;
+		position: relative;
 	}
+	.grn{
+		background: #009688;
+	}
+	.col-md-12{
+		position: absolute;
+		top: 75px;
+		left: 0;
+		height:400px;
+		width:100vw;
+		background: #E2E2E2;
+	}
+	
+	
+	
+	
+	
+	/****** JUMBOTRON CLASSES ********/
+	.h1{
+		margin: 150px 0 0 450px;
+	}
+	.h1 p{
+		
+	}
+	
+	
+	
+	
+	
+	
