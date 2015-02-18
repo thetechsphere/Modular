@@ -388,6 +388,7 @@
 			margin: 0;
 			padding: 0;
 			background: #673AB7;
+			box-shadow: 0px 2px 1px rgba(0,0,0,0.3);
 		}
 		.nav-links{
 			position: relative;
