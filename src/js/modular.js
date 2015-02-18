@@ -4,6 +4,8 @@
 	* Author: Corbin "Spr0xy" Matschull
 	* License: MIT
  **/
+// TODO: Write in Tooltip, Dropdown, and Scrollspy
+
   /* jQuery checker for propagation from the top of the page.
   
 
