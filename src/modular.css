@@ -4,7 +4,13 @@
 	* Author: Corbin "Spr0xy" Matschull
 	* License: MIT
  **/
- 
+		::selection{
+			color: #FF4081l;
+		}
+		html::-webkit-selection{
+			color: #FF4081l;
+		}
+		
 		html,body{
 			font-family: "Helvetica Neue", "Roboto", Helvetica, Arial, sans-serif;
         }
@@ -382,7 +388,7 @@
 			text-align:center;
 			display:flex;
 			width: 100vw;
-			left: -100vw;
+			left: -120vw;
 			top: -6.5vh;
 			opacity: 0;
 			transition-property: left;
@@ -552,7 +558,6 @@
                -o-transition: all .25s linear;
                   transition: all .25s linear;
 		}
-
 		.toaster-bar-lg .toast-text{
 			padding: 0.5em;
 			color: #fff;
