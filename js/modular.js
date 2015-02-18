@@ -3,13 +3,10 @@
 	* Name: modular.css V 1.4
 	* Author: Corbin "Spr0xy" Matschull
 	* License: MIT
-	*
-	*
-	*
-	* MASSIVE TODO: Rewrite this entire file, it's clunky, big and buggy!
  **/
   /* jQuery checker for propagation from the top of the page.
   
+
   jQuery.fn.topper = function(prop){
   'use strict';
     var v = parseInt(this.css(prop),10);
@@ -23,7 +20,6 @@
     $('.navburger').toggleClass('open');
     $('.nav-links').toggleClass('open');
   });
-  
   
 	/**
 	*
