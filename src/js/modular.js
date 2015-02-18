@@ -24,7 +24,6 @@
     $('.nav-links').toggleClass('open');
   });
   
-  
 	/**
 	*
 	* Modal controller
