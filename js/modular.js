@@ -19,14 +19,17 @@
  $('.navburger').click(function(){
     $('.navburger').toggleClass('open');
     $('.nav-links').toggleClass('open');
-  });
+});
+$('.modalT').hover(function(){
+	$(this).toggleClass('hovering');
+});
   
 	/**
 	*
 	* Modal controller
 	*
 	**/
-	$('.popup-button').click(function(){
+	$('.modalT').click(function(){
 			var down = false;
 				if(!$('body').hasClass('modal--open') && down == false){
 					$('body').addClass('modal--open');
