@@ -25,7 +25,7 @@ $('.navburger').click(function(){
 // Call modalT class and attach function for every event of hovering
 $('.modalT').hover(function(){
 	// Toggle "hovering" class for every hover event of "modalT"
-	$(this).toggleClass('hovering');
+	$(this).toggleClass('hovering');	
 });
 	/**
 	*
