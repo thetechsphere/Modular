@@ -90,17 +90,6 @@
 			margin-left: 0;
 			background: #fff;
 		}
-		/* ORIGINAL CODE FOR MODAL TRIGGER
-		.modalT.hovering span:nth-child(1){
-			transform: rotateZ(135deg);
-		}
-		
-		.modalT.hovering span:nth-child(2){
-			transform: rotateZ(45deg);
-			width: 15px;
-			left: 9px;
-			top: 32px;
-		}*/
 		.modalT.hovering span:nth-child(1){
 			transform: rotateZ(180deg);
 		}
