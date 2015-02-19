@@ -1,8 +1,8 @@
  /**
-	* Project: Modular
-	* Name: modular.css V 1.4
-	* Author: Corbin "Spr0xy" Matschull
-	* License: MIT
+  * Project: Modular
+  * Name: modular.js V 1.6
+  * Author: Corbin "Spr0xy" Matschull
+  * License: MIT
  **/
   /* jQuery checker for propagation from the top of the page.
   
