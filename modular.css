@@ -82,19 +82,40 @@
 		.modalT span:nth-child(1){
 			transform:rotateZ(90deg);
 		}
+		.modaT span:nth-child(3){
+			transform:rotateZ(90deg);
+		}
 		.modalT.hovering span{
 			border-radius:9px;
-			margin-left: 5px;
+			margin-left: 0;
 			background: #fff;
 		}
+		/* ORIGINAL CODE FOR MODAL TRIGGER
 		.modalT.hovering span:nth-child(1){
 			transform: rotateZ(135deg);
 		}
+		
 		.modalT.hovering span:nth-child(2){
 			transform: rotateZ(45deg);
 			width: 15px;
 			left: 9px;
 			top: 32px;
+		}*/
+		.modalT.hovering span:nth-child(1){
+			transform: rotateZ(180deg);
+		}
+		
+		.modalT.hovering span:nth-child(2){
+			transform: rotateZ(135deg);
+			width: 15px;
+			left: 15px;
+			top: 24px;
+		}
+		.modalT.hovering span:nth-child(3){
+			transform: rotateZ(45deg);
+			width: 15px;
+			left: 15px;
+			top: 34px;
 		}
         .regular-modal{
           left: 25% !important;
@@ -518,40 +539,40 @@
 			-o-transform: rotateZ(-180deg);
 			transform: rotateZ(-180deg); 
 		}
-.navburger span:nth-child(1) {
-  top: 0px;
-}
-.navburger span:nth-child(2) {
-  top: 9px;
-}
-.navburger span:nth-child(3) {
-  top: 18px;
-}
-.navburger.open span:nth-child(1) {
-  z-index: 99;
-  top: 2px;
-  left: 9px;
-  width: 25px;
-  border-radius:9px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-.navburger.open span:nth-child(2) {
-  border-radius: 9px;
-}
-.navburger.open span:nth-child(3) {
-  z-index: 99;
-  top: 18px;
-  left:9px;
-  width: 25px;
-  border-radius:9px;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}	
+		.navburger span:nth-child(1) {
+			top: 0px;
+		}
+		.navburger span:nth-child(2) {
+			top: 9px;
+		}
+		.navburger span:nth-child(3) {
+			top: 18px;
+		}
+		.navburger.open span:nth-child(1) {
+			z-index: 99;
+			top: 5px;
+			left: 17px;
+			width: 15px;
+			border-radius:9px;
+			-webkit-transform: rotate(45deg);
+			-moz-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+		.navburger.open span:nth-child(2) {
+			border-radius: 9px;
+		}
+		.navburger.open span:nth-child(3) {
+			z-index: 99;
+			top: 14px;
+			left:17px;
+			width: 15px;
+			border-radius:9px;
+			-webkit-transform: rotate(-45deg);
+			-moz-transform: rotate(-45deg);
+			-o-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+		}	
 		/******************* TOAST BARS ********************/
 		.toaster{
           width: 150px;
@@ -679,11 +700,6 @@
 		width:100vw;
 		background: #E2E2E2;
 	}
-	
-	
-	
-	
-	
 	/****** JUMBOTRON CLASSES ********/
 	.h1{
 		margin: 150px 0 0 450px;
