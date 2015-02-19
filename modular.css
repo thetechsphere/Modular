@@ -84,6 +84,8 @@
 		}
 		.modalT.hovering span{
 			border-radius:9px;
+			margin-left: 5px;
+			background: #fff;
 		}
 		.modalT.hovering span:nth-child(1){
 			transform: rotateZ(135deg);
@@ -482,15 +484,10 @@
 			height: 45px;
 			position: relative;
 			margin: 24px;
-			-webkit-transform: rotate(0deg);
-			-moz-transform: rotate(0deg);
-			-o-transform: rotate(0deg);
-			transform: rotate(0deg);
-			transform-origin: 50% 50%;
-			-webkit-transform-origin: 50% 50%;
-			-moz-transform-origin: 50% 50%;
-			-o-transform-origin: 50% 50%;
-			-ms-transform-origin: 50% 50%;
+			-webkit-transform: rotateZ(0deg);
+			-moz-transform: rotateZ(0deg);
+			-o-transform: rotateZ(0deg);
+			transform: rotateZ(0deg);
 			-webkit-transition: .5s ease-in-out;
 			-moz-transition: .5s ease-in-out;
 			-o-transition: .5s ease-in-out;
@@ -505,10 +502,10 @@
 			background: #fff;
 			opacity: 1;
 			left: 0;
-			-webkit-transform: rotate(0deg);
-			-moz-transform: rotate(0deg);
-			-o-transform: rotate(0deg  );
-			transform: rotate(0deg);
+			-webkit-transform: rotateZ(0deg);
+			-moz-transform: rotateZ(0deg);
+			-o-transform: rotateZ(0deg);
+			transform: rotateZ(0deg);
 			-webkit-transition: all .25s ease-in-out;
 			-moz-transition: all .25s ease-in-out;
 			-o-transition: all .25s ease-in-out;
@@ -516,10 +513,10 @@
 		}
 		.navburger.open{
 			margin: 7px;
-			-webkit-transform: rotate(-180deg);
-			-moz-transform: rotate(-180deg);
-			-o-transform: rotate(-180deg);
-			transform: rotate(-180deg); 
+			-webkit-transform: rotateZ(-180deg);
+			-moz-transform: rotateZ(-180deg);
+			-o-transform: rotateZ(-180deg);
+			transform: rotateZ(-180deg); 
 		}
 .navburger span:nth-child(1) {
   top: 0px;
@@ -694,9 +691,3 @@
 	.h1 p{
 		
 	}
-	
-	
-	
-	
-	
-	
