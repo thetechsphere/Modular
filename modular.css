@@ -1,8 +1,8 @@
  /**
-	* Project: Modular
-	* Name: modular.css V 1.4
-	* Author: Corbin "Spr0xy" Matschull
-	* License: MIT
+  * Project: Modular
+  * Name: modular.css V 1.6
+  * Author: Corbin "Spr0xy" Matschull
+  * License: MIT
  **/
 		::selection{
 			background: #FF4081;
@@ -13,7 +13,7 @@
 			color: #fff;
 		}
 		h1{
-		font-size: 45px;
+		font-size: 65px;
 		font-weight: 400;
 		}
 		html,body{
@@ -25,8 +25,8 @@
 		}
         .popup-button{
           position: absolute;
-          top:50vh;
-          left: 92vw;
+          top:47vh;
+          left: 85vw;
           z-index: 1;
 		  width: 60px;
           height: 60px;
@@ -96,25 +96,25 @@
           display:block;
           z-index: 999;
           position: fixed;
-          top: -100%;
+          left: 100vw;
           margin: 15% 23vw;
           background: #eee;
           width: 50vw;
-          opacity: 1;
+          opacity: 0;
           padding: 20px;
           border-radius: 10px;
           color: black;
           font-size: 14px;
           text-align: center;
-          box-shadow: 5px 15px 10px rgba(0,0,0,0.4);
-		  transition: all .5s ease-in;
-		  -webkit-transition: all .5s ease-in-out;
-		  -moz-transition: all .5s ease-in-out;
-		  -o-transition: all .5s ease-in-out;
-		  -ms-transition: all .5s ease-in-out;
+		  transition: all 1s cubic-bezier(.17,.67,.71,.94);
+		  -webkit-transition: all 1s cubic-bezier(.17,.67,.71,.94);
+		  -moz-transition: all 1s cubic-bezier(.17,.67,.71,.94);
+		  -o-transition: all 1s cubic-bezier(.17,.67,.71,.94);
+		  -ms-transition: all 1s cubic-bezier(.17,.67,.71,.94);
         }
 		.main-modal.modal-open{
-			top: 0 ;
+			left: 0;
+			opacity: 1;
 		}
 		.modal-lg{
           width: 75% !important; 
@@ -242,6 +242,7 @@
           border-radius: .4em;
           padding: 0;
           position: absolute;
+		  z-index: 999;
 		  transition: all .5s ease-in-out;
 		  -webkit-transition: all .5s ease-in-out;
 		  -moz-transition: all .5s ease-in-out;
@@ -277,6 +278,7 @@
           border-radius: .4em;
           padding: 0;
           position: absolute;
+		  z-index: 999;
 		  transition: all .5s ease-in-out;
 		  -webkit-transition: all .5s ease-in-out;
 		  -moz-transition: all .5s ease-in-out;
@@ -377,16 +379,29 @@
             box-shadow: 0px 5px 10px rgba(0,0,0,0.4);
           }      
         }
-		
+		@keyframes lr-bounce{
+			0%{
+				margin-left:-5px;
+			}
+			100%{
+				margin-left:0;
+			}
+		}
+		@-webkit-keyframes lr-bounce{
+			0%{
+				margin-left:-5px;
+			}
+			100%{
+				margin-left:0;
+			}
+		}
 		/******** GLOBAL NAVBAR STYLES******/
-		.header-bar .navbar-inner{
+		.navbar-inner{
 			position: fixed;
 			top: 0;
 			left: 0;
 			width: 100vw;
 			height: 75px;
-			margin: 0;
-			padding: 0;
 			background: #673AB7;
 			box-shadow: 0px 2px 1px rgba(0,0,0,0.3);
 			z-index:1;
@@ -398,7 +413,7 @@
 			display:flex;
 			width: 100vw;
 			left: -120vw;
-			top: -6vh;
+			top: -5.5vh;
 			opacity: 0;
 			transition-property: left;
 			-webkit-transition: all .50s ease-in;
@@ -407,16 +422,16 @@
 			-o-transition: all .50s ease-in;
              transition: all .50s ease-in;
 		}
-    .nav-links.open{
+		.nav-links.open{
 			position: relative !important;
 			list-style-type: none !important;
 			text-align:center !important;
 			display:flex !important;
 			width: 100vw !important;
 			left: 5vw !important;
-			top: -6vh !important;
+			top: -5.5vh !important;
 			opacity: 1 !important;
-    }
+		}
 		.nav-el{
 			margin: 0 20px;
 			width: auto;
@@ -458,30 +473,30 @@
 			transition: .5s ease-in-out;
 			cursor: pointer;
 		}
-.navburger span {
-  display: block;
-  position: absolute;
-  height: 4px;
-  width: 52%;
-  background: #fff;
-  opacity: 1;
-  left: 0;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg  );
-  transform: rotate(0deg);
-  -webkit-transition: all .25s ease-in-out;
-     -moz-transition: all .25s ease-in-out;
-       -o-transition: all .25s ease-in-out;
-          transition: all .25s ease-in-out;
-}
-.navburger.open{
-	margin: 7px;
-  -webkit-transform: rotate(-180deg);
-  -moz-transform: rotate(-180deg);
-  -o-transform: rotate(-180deg);
-  transform: rotate(-180deg);
-}
+		.navburger span {
+			display: block;
+			position: absolute;
+			height: 4px;
+			width: 52%;
+			background: #fff;
+			opacity: 1;
+			left: 0;
+			-webkit-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			-o-transform: rotate(0deg  );
+			transform: rotate(0deg);
+			-webkit-transition: all .25s ease-in-out;
+			-moz-transition: all .25s ease-in-out;
+			-o-transition: all .25s ease-in-out;
+			transition: all .25s ease-in-out;
+		}
+		.navburger.open{
+			margin: 7px;
+			-webkit-transform: rotate(-180deg);
+			-moz-transform: rotate(-180deg);
+			-o-transform: rotate(-180deg);
+			transform: rotate(-180deg); 
+		}
 .navburger span:nth-child(1) {
   top: 0px;
 }
@@ -508,7 +523,7 @@
 .navburger.open span:nth-child(3) {
   z-index: 99;
   top: 18px;
-  left:8px;
+  left:9px;
   width: 25px;
   border-radius:9px;
   -webkit-transform: rotate(-45deg);
@@ -629,7 +644,7 @@
 		width: 100vw;
 		height: 100vh;
 		left: -1vw;
-		top: 41vh;
+		top: 38vh;
 		position: relative;
 	}
 	.grn{
@@ -655,9 +670,3 @@
 	.h1 p{
 		
 	}
-	
-	
-	
-	
-	
-	
