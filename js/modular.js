@@ -22,10 +22,19 @@ $('.navburger').click(function(){
 	$('.nav-links').toggleClass('open');
 });
 
+
 // Call modalT class and attach function for every event of hovering
 $('.modalT').hover(function(){
 	// Toggle "hovering" class for every hover event of "modalT"
 	$(this).toggleClass('hovering');	
+});
+// Call post-box class and attach function for every event of hovering
+$('.post-box').hover(function(){
+	// Toggle "hovering" class for every hover event of "post-box"
+	$(this).toggleClass('hovering');	
+});
+$('.post-box').click(function(){
+	
 });
 	/**
 	*
@@ -65,7 +74,7 @@ $('.modalT').hover(function(){
 				// Toggle the main-modal class "modal-open"
 				$('.main-modal').toggleClass('modal-open');
 				// Toggle the popped class appended to the popup
-				$('.popup').toggleClass('popped');
+				$(this).toggleClass('popped');
 				// Return down to false to repeat modal animations
 				down = false;
 			}
