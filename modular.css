@@ -57,9 +57,9 @@
 			width: 60px;
 			-webkit-transition: all .45s ease-in-out;
 			   -moz-transition: all .45s ease-in-out;
-          -ms-transition: all .45s ease-in-out;
-           -o-transition: all .45s ease-in-out;
-              transition: all .45s ease-in-out;
+				-ms-transition: all .45s ease-in-out;
+				-o-transition: all .45s ease-in-out;
+				transition: all .45s ease-in-out;
 		}
 		.modalT .btn-cnt:hover{
 			color:#fff;
@@ -89,6 +89,9 @@
 		.modaT span:nth-child(3){
 			transform:rotateZ(90deg);
 		}
+		.modalT span:nth-child(2){
+			opacity: 0;
+		}
 		.modalT.hovering span{
 			border-radius:9px;
 			margin-left: 0;
@@ -108,12 +111,12 @@
 		.modalT.hovering span:nth-child(1){
 			transform: rotateZ(180deg);
 		}
-		
 		.modalT.hovering span:nth-child(2){
 			transform: rotateZ(135deg);
 			width: 15px;
 			left: 15px;
 			top: 24px;
+			opacity: 1;
 		}
 		.modalT.hovering span:nth-child(3){
 			transform: rotateZ(45deg);
@@ -454,7 +457,7 @@
 			left: 0;
 			width: 100vw;
 			height: 75px;
-			background: #673AB7;
+			background: #1976D2;
 			box-shadow: 0px 2px 1px rgba(0,0,0,0.3);
 			z-index:1;
 		}
@@ -496,6 +499,7 @@
 			color: #fff;
 			font-size: 20px;
 			font-family: 'Roboto', sans-serif;
+			font-weight: 400;
 			transition: color .2s linear;
 			-webkit-transition: color .2s linear;
 			-moz-transition: color .2s linear;
@@ -514,10 +518,10 @@
 			-moz-transform: rotateZ(0deg);
 			-o-transform: rotateZ(0deg);
 			transform: rotateZ(0deg);
-			-webkit-transition: .5s ease-in-out;
-			-moz-transition: .5s ease-in-out;
-			-o-transition: .5s ease-in-out;
-			transition: .5s ease-in-out;
+			-webkit-transition:all .5s ease-in-out;
+			-moz-transition:all .5s ease-in-out;
+			-o-transition:all .5s ease-in-out;
+			transition:all .5s ease-in-out;
 			cursor: pointer;
 		}
 		.navburger span {
@@ -603,7 +607,7 @@
 		
 		/*********** TOASTER SIZES ***********/
 		.i-am-toast{
-			left: -30vw;
+			left: -60vw;
 		}
 		.i-am-toast-right{
 			left: 100vw;
@@ -713,6 +717,11 @@
 	/****** JUMBOTRON CLASSES ********/
 	.h1{
 		margin: 150px 0 0 450px;
+		transition:margin .8s linear;
+		-webkit-transition:margin .8s linear;
+		-moz-transition:margin .8s linear;
+		-o-transition:margin .8s linear;
+		-ms-transition:margin .8s linear;
 	}
 	.h1 p{
 		
@@ -725,4 +734,14 @@
 	.lg-paragraph{
 		margin-top: 100px;
 		padding: 25px;
+	}
+	@media (max-width: 1000px){
+		.h1{
+			margin:150px 0 0 290px;
+		}
+	}
+	@media (max-width: 850px){
+		.h1{
+			margin:150px 0 0 180px;
+		}
 	}
