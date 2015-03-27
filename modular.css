@@ -27,24 +27,41 @@
 		body{
 			overflow-x:hidden;
 		}
+		.post-box{
+			position: fixed;
+			top:90vh;
+			left: 85vw;
+			z-index: 1;
+			width: 60px;
+			height: 60px;
+			font-size:24px;
+			text-align:center;
+			border-radius: 2em;
+			background:#64B5F6;
+			-webkit-transition: all .25s ease-in-out;
+				-moz-transition: all .25s ease-in-out;
+				-ms-transition: all .25s ease-in-out;
+				-o-transition: all .25s ease-in-out;
+					transition: all .25s ease-in-out;			
+		}
         .modalT{
-          position: absolute;
-          top:47vh;
-          left: 85vw;
-          z-index: 1;
-		  width: 60px;
-          height: 60px;
-		  font-size:24px;
-		  text-align:center;
-          border-radius: 2em;
-          background:#64B5F6;
-          -webkit-transition: all .25s ease-in-out;
-             -moz-transition: all .25s ease-in-out;
-              -ms-transition: all .25s ease-in-out;
-               -o-transition: all .25s ease-in-out;
-                  transition: all .25s ease-in-out;
+			position: absolute;
+			top:47vh;
+			left: 85vw;
+			z-index: 1;
+			width: 60px;
+			height: 60px;
+			font-size:24px;
+			text-align:center;
+			border-radius: 2em;
+			background:#64B5F6;
+			-webkit-transition: all .25s ease-in-out;
+				-moz-transition: all .25s ease-in-out;
+				-ms-transition: all .25s ease-in-out;
+				-o-transition: all .25s ease-in-out;
+					transition: all .25s ease-in-out;
         }
-		.modalT:hover{
+		.modalT:hover, .post-box:hover{
 			box-shadow: 0px 10px 15px rgba(0,0,0,0.4);
 			background: #2196F3;
 			cursor:pointer;
@@ -57,9 +74,9 @@
 			width: 60px;
 			-webkit-transition: all .45s ease-in-out;
 			   -moz-transition: all .45s ease-in-out;
-          -ms-transition: all .45s ease-in-out;
-           -o-transition: all .45s ease-in-out;
-              transition: all .45s ease-in-out;
+				-ms-transition: all .45s ease-in-out;
+				-o-transition: all .45s ease-in-out;
+				transition: all .45s ease-in-out;
 		}
 		.modalT .btn-cnt:hover{
 			color:#fff;
@@ -69,7 +86,7 @@
 			-o-transform:rotateZ(180deg);
 			-ms-transform:rotateZ(180deg);
 		}
-		.modalT span{
+		.modalT span, .post-box span{
 			display:block;
 			position: absolute;
 			width: 28px;
@@ -83,13 +100,16 @@
 				 -o-transition: all .45s ease-in-out;
                     transition: all .45s ease-in-out;
 		}
-		.modalT span:nth-child(1){
+		.modalT span:nth-child(1), .post-box span:nth-child(1){
 			transform:rotateZ(90deg);
 		}
-		.modaT span:nth-child(3){
+		.modaT span:nth-child(3) .post-box span:nth-child(3){
 			transform:rotateZ(90deg);
 		}
-		.modalT.hovering span{
+		.modalT span:nth-child(2), .post-box span:nth-child(2){
+			opacity: 0;
+		}
+		.modalT.hovering span, .post-box.hovering span{
 			border-radius:9px;
 			margin-left: 0;
 			background: #fff;
@@ -108,19 +128,70 @@
 		.modalT.hovering span:nth-child(1){
 			transform: rotateZ(180deg);
 		}
-		
+		.post-box.hovering span:nth-child(1){
+			transform: rotateZ(90deg);
+		}
 		.modalT.hovering span:nth-child(2){
 			transform: rotateZ(135deg);
 			width: 15px;
 			left: 15px;
 			top: 24px;
+			opacity: 1;
+		}
+		.post-box.hovering span:nth-child(2){
+			transform: rotateZ(45deg);
+			width: 15px;
+			left: 27px;
+			top: 21px;
+			opacity: 1;		
 		}
 		.modalT.hovering span:nth-child(3){
 			transform: rotateZ(45deg);
 			width: 15px;
 			left: 15px;
 			top: 34px;
-		}*/
+		}
+		.post-box.hovering span:nth-child(3){
+			transform: rotateZ(-45deg);
+			width: 15px;
+			left: 18px;
+			top: 21px;			
+		}
+		.postable{
+			width: 50px;
+			height: 120px;
+			position: fixed;
+			left: 85.5vw;
+			top: 74vh;
+			z-index: 999;
+		}
+		.postable .box-list{
+			list-style-type: none;
+			margin:0;
+			padding:0;
+		}
+		.postable .box-list > li{
+			height: 40px;
+			width: 40px;
+			margin: 5px;
+			border-radius: 2em;
+			text-align: center;
+		}
+		.postable .box-list > li:hover{
+			cursor:pointer;
+		}
+		.settings{
+			
+		}
+		.settings.hovering{
+			
+		}
+		.box-item{
+			background: #64B5F6;
+		}
+		.fa-line{
+			line-height: 1.8em !important;
+		}
 		.regular-modal{
           left: 25% !important;
         }
@@ -454,7 +525,7 @@
 			left: 0;
 			width: 100vw;
 			height: 75px;
-			background: #673AB7;
+			background: #1976D2;
 			box-shadow: 0px 2px 1px rgba(0,0,0,0.3);
 			z-index:1;
 		}
@@ -496,6 +567,7 @@
 			color: #fff;
 			font-size: 20px;
 			font-family: 'Roboto', sans-serif;
+			font-weight: 400;
 			transition: color .2s linear;
 			-webkit-transition: color .2s linear;
 			-moz-transition: color .2s linear;
@@ -514,10 +586,10 @@
 			-moz-transform: rotateZ(0deg);
 			-o-transform: rotateZ(0deg);
 			transform: rotateZ(0deg);
-			-webkit-transition: .5s ease-in-out;
-			-moz-transition: .5s ease-in-out;
-			-o-transition: .5s ease-in-out;
-			transition: .5s ease-in-out;
+			-webkit-transition:all .5s ease-in-out;
+			-moz-transition:all .5s ease-in-out;
+			-o-transition:all .5s ease-in-out;
+			transition:all .5s ease-in-out;
 			cursor: pointer;
 		}
 		.navburger span {
@@ -603,7 +675,7 @@
 		
 		/*********** TOASTER SIZES ***********/
 		.i-am-toast{
-			left: -30vw;
+			left: -60vw;
 		}
 		.i-am-toast-right{
 			left: 100vw;
@@ -713,6 +785,11 @@
 	/****** JUMBOTRON CLASSES ********/
 	.h1{
 		margin: 150px 0 0 450px;
+		transition:margin .8s linear;
+		-webkit-transition:margin .8s linear;
+		-moz-transition:margin .8s linear;
+		-o-transition:margin .8s linear;
+		-ms-transition:margin .8s linear;
 	}
 	.h1 p{
 		
@@ -725,4 +802,14 @@
 	.lg-paragraph{
 		margin-top: 100px;
 		padding: 25px;
+	}
+	@media (max-width: 1000px){
+		.h1{
+			margin:150px 0 0 290px;
+		}
+	}
+	@media (max-width: 850px){
+		.h1{
+			margin:150px 0 0 180px;
+		}
 	}
